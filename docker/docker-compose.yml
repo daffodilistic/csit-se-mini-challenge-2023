@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  rabbit_travels:
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - 8080:8080
+    volumes:
+      - ./config.json:/var/app/config.json
